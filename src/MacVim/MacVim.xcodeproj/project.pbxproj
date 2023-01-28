@@ -27,7 +27,6 @@
 		1D80FBD40CBBD3B700102A1C /* MMFullScreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80FBD00CBBD3B700102A1C /* MMFullScreenWindow.m */; };
 		1D80FBD60CBBD3B700102A1C /* MMVimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80FBD20CBBD3B700102A1C /* MMVimView.m */; };
 		1D8B5A53104AF9FF002E59D5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B5A52104AF9FF002E59D5 /* Carbon.framework */; };
-		1D9C60520EF79C0C0034AD44 /* MacVim.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D9C602E0EF79C0C0034AD44 /* MacVim.icns */; };
 		1DCD00BF0E50B2B700460166 /* Attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DCD00AA0E50B2B700460166 /* Attention.png */; };
 		1DCD00C00E50B2B700460166 /* Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DCD00AB0E50B2B700460166 /* Copy.png */; };
 		1DCD00C10E50B2B700460166 /* Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DCD00AC0E50B2B700460166 /* Cut.png */; };
@@ -77,6 +76,7 @@
 		90B9877D2A579F9500FC95D6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B9877B2A579F9500FC95D6 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		925B55D5254B604A006B047E /* MMHoverButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 925B55D1254B604A006B047E /* MMHoverButton.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		925B55D7254B61AC006B047E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925B55D6254B61AB006B047E /* QuartzCore.framework */; };
+		926E5D0329A3EBD1004C40A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926E5D0229A3EBD1004C40A2 /* Images.xcassets */; };
 		92C6F6E825587E1C007AE21E /* MMTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6F6E325587E1C007AE21E /* MMTab.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		92C6F6E925587E1C007AE21E /* MMTabline.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6F6E525587E1C007AE21E /* MMTabline.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
@@ -199,7 +199,6 @@
 		1D80FBD10CBBD3B700102A1C /* MMVimView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MMVimView.h; sourceTree = "<group>"; };
 		1D80FBD20CBBD3B700102A1C /* MMVimView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MMVimView.m; sourceTree = "<group>"; };
 		1D8B5A52104AF9FF002E59D5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		1D9C602E0EF79C0C0034AD44 /* MacVim.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacVim.icns; path = icons/MacVim.icns; sourceTree = "<group>"; };
 		1DCD00AA0E50B2B700460166 /* Attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Attention.png; path = Toolbar/Attention.png; sourceTree = "<group>"; };
 		1DCD00AB0E50B2B700460166 /* Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Copy.png; path = Toolbar/Copy.png; sourceTree = "<group>"; };
 		1DCD00AC0E50B2B700460166 /* Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cut.png; path = Toolbar/Cut.png; sourceTree = "<group>"; };
@@ -441,6 +440,14 @@
 		90F84F312521F8760000268B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		90F84F322521F87F0000268B /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		90F84F332521F8880000268B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		925B55CD254B604A006B047E /* MMHoverButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHoverButton.h; sourceTree = "<group>"; };
+		925B55D1254B604A006B047E /* MMHoverButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHoverButton.m; sourceTree = "<group>"; };
+		925B55D6254B61AB006B047E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		926E5D0229A3EBD1004C40A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		92C6F6E325587E1C007AE21E /* MMTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTab.m; sourceTree = "<group>"; };
+		92C6F6E525587E1C007AE21E /* MMTabline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTabline.m; sourceTree = "<group>"; };
+		92C6F6E625587E1C007AE21E /* MMTabline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTabline.h; sourceTree = "<group>"; };
+		92C6F6E725587E1C007AE21E /* MMTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTab.h; sourceTree = "<group>"; };
 		95241CE12573D587001E3711 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95241CF025749CC6001E3711 /* vim9type.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = vim9type.c; path = ../vim9type.c; sourceTree = "<group>"; };
 		95241CF125749CC6001E3711 /* help.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = help.c; path = ../help.c; sourceTree = "<group>"; };
@@ -454,13 +461,6 @@
 		95241CF925749CC7001E3711 /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = errors.h; path = ../errors.h; sourceTree = "<group>"; };
 		95241CFA25749CC7001E3711 /* textobject.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = textobject.c; path = ../textobject.c; sourceTree = "<group>"; };
 		95241CFB25749D4A001E3711 /* os_macosx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = os_macosx.m; path = ../os_macosx.m; sourceTree = "<group>"; };
-		925B55CD254B604A006B047E /* MMHoverButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHoverButton.h; sourceTree = "<group>"; };
-		925B55D1254B604A006B047E /* MMHoverButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHoverButton.m; sourceTree = "<group>"; };
-		925B55D6254B61AB006B047E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		92C6F6E325587E1C007AE21E /* MMTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTab.m; sourceTree = "<group>"; };
-		92C6F6E525587E1C007AE21E /* MMTabline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTabline.m; sourceTree = "<group>"; };
-		92C6F6E625587E1C007AE21E /* MMTabline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTabline.h; sourceTree = "<group>"; };
-		92C6F6E725587E1C007AE21E /* MMTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTab.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,7 +636,6 @@
 			isa = PBXGroup;
 			children = (
 				1D384A0D100D671700D3C22F /* KeyBinding.plist */,
-				1D9C602E0EF79C0C0034AD44 /* MacVim.icns */,
 				0395A8A90D72D88B00881434 /* General.png */,
 				1D22374A0E45DF4800E6FFFF /* Advanced.png */,
 				1DD3D51D0D82D4C9006E4320 /* ibeam.png */,
@@ -653,6 +652,7 @@
 				907FF7522521BDA600BADACB /* Preferences.xib */,
 				907FF74F2521BCE200BADACB /* MainMenu.xib */,
 				909894362A56EB1E007B84A3 /* WhatsNew.xib */,
+				926E5D0229A3EBD1004C40A2 /* Images.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -913,7 +913,6 @@
 				1DE608B80C58807F0055263D /* Copy default vimrc files */,
 				9050374C2AAEFA2500E9846A /* Generate runtime folder list */,
 				90BD4EF224E0E8B700BF29F2 /* Copy Vim runtime / localization files */,
-				1D1C31F00EFFBFD6003FE9A5 /* Make Document Icons */,
 				528DA6671426D456003380F1 /* Copy Scripts */,
 				52283AB71EBA200C00A6F6B9 /* Copy mvim scripts */,
 				90C052E1251E889500E2D81E /* Copy vimtutor */,
@@ -1034,6 +1033,7 @@
 				1DCD00BF0E50B2B700460166 /* Attention.png in Resources */,
 				1DCD00C00E50B2B700460166 /* Copy.png in Resources */,
 				1DCD00C10E50B2B700460166 /* Cut.png in Resources */,
+				926E5D0329A3EBD1004C40A2 /* Images.xcassets in Resources */,
 				1DCD00C20E50B2B700460166 /* FindHelp.png in Resources */,
 				1DCD00C30E50B2B700460166 /* FindNext.png in Resources */,
 				1DCD00C40E50B2B700460166 /* FindPrev.png in Resources */,
@@ -1053,7 +1053,6 @@
 				909894382A56EB1E007B84A3 /* WhatsNew.xib in Resources */,
 				1DCD00D20E50B2B700460166 /* TagJump.png in Resources */,
 				1DCD00D30E50B2B700460166 /* Undo.png in Resources */,
-				1D9C60520EF79C0C0034AD44 /* MacVim.icns in Resources */,
 				1D384A0E100D671700D3C22F /* KeyBinding.plist in Resources */,
 				907FF7542521BDA600BADACB /* Preferences.xib in Resources */,
 				907FF7512521BCE200BADACB /* MainMenu.xib in Resources */,
@@ -1071,23 +1070,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D1C31F00EFFBFD6003FE9A5 /* Make Document Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(PROJECT_DIR)/icons",
-			);
-			name = "Make Document Icons";
-			outputPaths = (
-				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Clear deployment target, else the python script always thinks we're building on Tiger\nunset MACOSX_DEPLOYMENT_TARGET\n\n# Generate the icons (redirect stderr to ignore warnings)\ncd \"$PROJECT_DIR\"/icons/\nmake OUTDIR=\"$TARGET_BUILD_DIR\"/$UNLOCALIZED_RESOURCES_FOLDER_PATH 2> /dev/null\n";
-			showEnvVarsInLog = 0;
-		};
 		52283AB71EBA200C00A6F6B9 /* Copy mvim scripts */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1435,6 +1417,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1468,6 +1451,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
