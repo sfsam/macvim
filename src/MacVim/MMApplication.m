@@ -57,7 +57,7 @@
     NSString *prerelease = isPrerelease ? @"\npre-release" : @"";
 
     NSString *title = [NSString stringWithFormat:
-            @"MacVim r%@ (Vim %@)%@", version, marketingVersion, prerelease];
+            @"Version %@%@\n\nVim %@", version, prerelease, marketingVersion];
 
     [self orderFrontStandardAboutPanelWithOptions:
             [NSDictionary dictionaryWithObjectsAndKeys:
