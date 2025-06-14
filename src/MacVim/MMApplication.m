@@ -48,22 +48,39 @@
 
 - (void)orderFrontStandardAboutPanel:(id)sender
 {
-    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:
-            @"CFBundleVersion"];
-    NSString *marketingVersion = [[NSBundle mainBundle]
-            objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSString *macVimVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:
+                               @"CFBundleVersion"];
+    NSString *vimVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:
+                            @"CFBundleShortVersionString"];
 
-    BOOL isPrerelease = [version rangeOfString:@"."].length > 0;
+    BOOL isPrerelease = [macVimVersion rangeOfString:@"."].length > 0;
     NSString *prerelease = isPrerelease ? @"\npre-release" : @"";
 
-    NSString *title = [NSString stringWithFormat:
-            @"MacVim r%@ (Vim %@)%@", version, marketingVersion, prerelease];
+    NSString *version = [NSString stringWithFormat: @"Version %@%@\n\nVim %@",
+                         macVimVersion,
+                         prerelease,
+                         vimVersion];
 
-    [self orderFrontStandardAboutPanelWithOptions:
-            [NSDictionary dictionaryWithObjectsAndKeys:
-                @"",    @"Version",
-                title,  @"ApplicationVersion",
-                nil]];
+    // Credits is simply a macvim.org link, monospaced, bold, centered...
+
+    NSMutableParagraphStyle *creditsParaStyle = [NSMutableParagraphStyle new];
+    [creditsParaStyle setAlignment: NSTextAlignmentCenter];
+
+    NSDictionary *creditsAttrs = @{
+        NSParagraphStyleAttributeName: creditsParaStyle,
+        NSFontAttributeName: [NSFont fontWithName: @"Menlo-Bold" size: 12],
+        NSLinkAttributeName: [NSURL URLWithString: @"https://macvim.org"]
+    };
+
+    NSMutableAttributedString *credits = [[NSMutableAttributedString alloc]
+                                          initWithString: @"\nmacvim.org\n"
+                                          attributes: creditsAttrs];
+
+    [self orderFrontStandardAboutPanelWithOptions: @{
+        @"Version": @"",
+        @"ApplicationVersion": version,
+        @"Credits": credits
+    }];
 }
 
 @end
