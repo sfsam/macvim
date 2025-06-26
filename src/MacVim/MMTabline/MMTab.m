@@ -19,6 +19,8 @@ typedef NSString * NSAnimatablePropertyKey;
     MMTabline __weak *_tabline;
     MMHoverButton *_closeButton;
     NSTextField *_titleLabel;
+    NSShadow *_shadowSelected;
+    NSShadow *_shadowUnselected;
 }
 
 @synthesize tag = _tag;
@@ -69,6 +71,18 @@ typedef NSString * NSAnimatablePropertyKey;
         _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_titleLabel];
         
+        _shadowSelected = [NSShadow new];
+        _shadowSelected.shadowBlurRadius = MMTabShadowBlurRadius;
+        _shadowSelected.shadowOffset = NSMakeSize(0, -1);
+        _shadowSelected.shadowColor = [NSColor.blackColor colorWithAlphaComponent:0.5];
+
+        _shadowUnselected = [NSShadow new];
+        _shadowUnselected.shadowBlurRadius = MMTabShadowBlurRadius;
+        _shadowUnselected.shadowOffset = NSMakeSize(0, -1);
+        _shadowUnselected.shadowColor = [NSColor.blackColor colorWithAlphaComponent:0.2];
+
+        self.shadow = _shadowSelected;
+
         NSDictionary *viewDict = NSDictionaryOfVariableBindings(_closeButton, _titleLabel);
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-9-[_closeButton]-(>=5)-[_titleLabel]-(>=16)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewDict]];
         [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:_titleLabel attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
@@ -112,12 +126,15 @@ typedef NSString * NSAnimatablePropertyKey;
 {
     const BOOL hasFocus = (self.window == nil) || [self.window isKeyWindow];
 
+    self.shadow = _shadowUnselected;
+
     // Transitions to and from MMTabStateSelected
     // DO NOT animate so that UX feels snappier.
     if (state == MMTabStateSelected) {
         _closeButton.fgColor = _tabline.tablineSelFgColor;
         _titleLabel.textColor = hasFocus ? _tabline.tablineSelFgColor : _tabline.tablineUnfocusedSelFgColor;
         self.fillColor = _tabline.tablineSelBgColor;
+        self.shadow = _shadowSelected;
     }
     else if (state == MMTabStateUnselected) {
         if (_state == MMTabStateSelected) {
